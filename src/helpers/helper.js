@@ -60,6 +60,7 @@ export const userDetailsQuery = gql`
           homepageUrl
           createdAt
           description
+          url
           stargazers {
             totalCount
           }
