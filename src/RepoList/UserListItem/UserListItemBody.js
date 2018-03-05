@@ -16,7 +16,7 @@ const UserListItemBody = ({
     <div className="list-header">
       <div className="action-container">
         <div>
-          <Link to={`/user/${login}`} className="list-header__text">{ name }</Link>
+          <Link to={`/user/${login}`} className="list-header__text underline">{ name }</Link>
           <h5 className="list-header__subtext">{ login }</h5>
         </div>
         <div>

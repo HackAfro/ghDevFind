@@ -38,8 +38,10 @@
   cursor: pointer;
 }
 
-.list-header__text:hover{
+
+.underline:hover{
  border-bottom: 2px solid var(--text-color);
+ transition: 0.3s ease-in;
 }
 
 .list-header__subtext {
