@@ -11,7 +11,7 @@
   width: 40%;
   margin: auto;
   border: none;
-  background: rgb(51, 57, 62);
+  background: var(--background-light);
   cursor: pointer;
   border-radius: 10px;
   padding: 10px;

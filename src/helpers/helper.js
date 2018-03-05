@@ -138,3 +138,5 @@ export function userAge(date) {
   const dateDiff = now.diff(momDate, 'years', true);
   return parseNum(dateDiff, 1);
 }
+
+export const COLOR_CODE = '#30CD9A';

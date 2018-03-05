@@ -9,8 +9,9 @@ main {
 
 body{
   --background-light: #223c4d;
-  --text-color: #64dd17;
+  --text-color: #30CD9A;
   --text-color-light: ghostwhite;
+  --background: rgb(45, 50, 62);
 }
 
 #root {
