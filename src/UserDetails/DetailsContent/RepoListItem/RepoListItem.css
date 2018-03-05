@@ -7,14 +7,13 @@
   box-shadow: 0 2px 3px 1px rgba(0,0,0,0.2);
 }
 
-.repo-desc > h3{
+.repo-desc > a{
   font-size: 18px;
   text-transform: capitalize;
   color: var(--text-color);
   opacity: .76;
   font-weight: 600;
   margin: 7px 0;
-  text-wrap: normal;
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;

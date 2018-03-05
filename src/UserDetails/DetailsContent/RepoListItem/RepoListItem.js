@@ -9,9 +9,9 @@ import './RepoListItem.css';
 const RepoListItem = ({ repo }) => (
   <div className="repo-con">
     <div className="repo-desc">
-      <h3 title={repo.name}>
+      <a title={repo.name} className="underline" href={repo.url} target="_blank">
         { repo.name }
-      </h3>
+      </a>
       <p>{ repo.description }
       </p>
     </div>
