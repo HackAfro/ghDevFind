@@ -1,0 +1,28 @@
+.badge {
+  min-height: 22px;
+  min-width: 30px;
+  text-align: center;
+  line-height: 23px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 2px 4px;
+  color: white;
+  padding: 1px 10px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.badge.primary {
+  background: var(--text-color);
+}
+
+.badge.blue {
+  background: rgb(31, 150, 219);
+}
+
+.badge.lightseagreen {
+  background: lightseagreen;
+}

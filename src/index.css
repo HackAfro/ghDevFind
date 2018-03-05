@@ -1,0 +1,22 @@
+html,
+body,
+main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto Slab', serif !important;
+}
+
+body{
+  --background-light: #223c4d;
+  --text-color: #64dd17;
+  --text-color-light: ghostwhite;
+}
+
+#root {
+  height: 100%;
+}
+
+.text-color{
+  color: var(--text-color);
+}

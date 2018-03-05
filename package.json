@@ -1,0 +1,45 @@
+{
+  "name": "ghdevfind",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "apollo-client-preset": "^1.0.8",
+    "apollo-link-context": "^1.0.3",
+    "create-react-app": "^1.5.1",
+    "dotenv": "^5.0.0",
+    "graphql": "^0.13.0",
+    "graphql-tag": "^2.7.3",
+    "jsdom": "^11.6.2",
+    "lodash": "^4.17.5",
+    "moment": "^2.20.1",
+    "node-fetch": "^2.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
+    "react-dom": "^16.2.0",
+    "react-feather": "^1.0.8",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.0",
+    "react-select": "^1.2.1",
+    "react-toggle-switch": "^3.0.4",
+    "request": "^2.83.0",
+    "rxjs": "^5.5.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.2.0"
+  }
+}

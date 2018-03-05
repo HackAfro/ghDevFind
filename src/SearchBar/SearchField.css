@@ -1,0 +1,19 @@
+.search-bar {
+  width: 350px;
+  padding: 12px;
+  border-radius: 30px;
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto Slab', serif;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  transition: 1s;
+  text-align: center;
+}
+
+.search-bar:focus {
+  box-shadow: 0 5px 6px 0 rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-color: var(--text-color);
+}

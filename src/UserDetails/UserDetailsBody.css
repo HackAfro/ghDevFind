@@ -1,0 +1,78 @@
+
+.user-details{
+  width: 85%;
+  margin: 20px auto 0;
+  display: flex;
+}
+
+.user-sidebar{
+  width: 20%;
+  padding: 20px 15px;
+}
+
+.user-sidebar__body{
+  background: var(--background-light);
+  border-radius: 5px;
+  padding: 15px;
+  min-height: 300px;
+  width: 100%;
+}
+
+.user-sidebar__body > hr{
+  border: 1px solid ;
+  opacity: 0.2;
+  margin: 3px 0;
+}
+
+.user-sidebar__header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 10px;
+}
+
+.user-sidebar__avatar{
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.user-sidebar__username{
+  font-size: 15px;
+  font-weight: 300;
+  color: ghostwhite;
+  opacity: 0.7;
+  margin: 7px;
+}
+
+.user-sidebar__username>.at{
+  font-style: italic;
+}
+
+.user-sidebar__bio{
+  font-size: 13px;
+  color: ghostwhite;
+  margin: 0 0 7px;
+  text-align: center;
+}
+
+.user-sidebar__content{
+  padding: 15px;
+}
+
+.user-sidebar__info{
+  display: flex;
+  margin: 10px 0;
+}
+
+.user-sidebar__info > span{
+  margin: 0 5px;
+}
+
+.user-sidebar__info > .value{
+  font-size: 13px;
+  color: ghostwhite;
+  opacity: .5;
+  font-weight: 400;
+}

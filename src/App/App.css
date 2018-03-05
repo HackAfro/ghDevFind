@@ -1,0 +1,39 @@
+main {
+  background: rgb(45, 50, 62);
+  min-height: 100vh;
+}
+
+a{
+  text-decoration: none;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.app-body {
+  display: flex;
+}
+
+.sub-header{
+  font-weight: 400;
+  opacity: 0.7;
+  margin: 10px 0;
+}
+
+.result-section {
+  display: flex;
+  padding: 0 25px;
+  width: 80%;
+}
+
+.user-list {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-content {
+  padding-top: 60px;
+}
