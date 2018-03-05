@@ -18,6 +18,10 @@ body{
   height: 100%;
 }
 
+.switch.on{
+  background: var(--text-color) !important;
+}
+
 .text-color{
   color: var(--text-color);
 }
