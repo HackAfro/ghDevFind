@@ -31,6 +31,9 @@ class AppBody extends Component {
     };
     this.onChange = reducer.bind(this);
     this.clickHandler = this.clickHandler.bind(this);
+  }
+
+  componentDidMount() {
     observable.subscribe({
       next: (event) => {
         if (event.action === 'SET_PAGINATION_DATA') {
@@ -44,6 +47,10 @@ class AppBody extends Component {
         }
       },
     });
+  }
+
+  componentWillUnmount() {
+    observable.unsubscribe();
   }
 
   clickHandler(e, action) {
@@ -62,7 +69,6 @@ class AppBody extends Component {
     }
   }
 
-
   render() {
     return (
       <React.Fragment>
@@ -79,12 +85,13 @@ class AppBody extends Component {
             onChange={this.onChange}
           />
           <div className="result-section">
-            { !this.state.loadingRepos &&
-            <Paginator
-              direction="left"
-              clickHandler={this.clickHandler}
-              disabled={this.state.hasPrev}
-            /> }
+            {!this.state.loadingRepos && (
+              <Paginator
+                direction="left"
+                clickHandler={this.clickHandler}
+                disabled={this.state.hasPrev}
+              />
+            )}
             <div className="user-list">
               <RepoList
                 {...this.props}
@@ -94,12 +101,13 @@ class AppBody extends Component {
                 limit={this.state.limit}
               />
             </div>
-            { !this.state.loadingRepos &&
-            <Paginator
-              direction="right"
-              clickHandler={this.clickHandler}
-              disabled={this.state.hasNext}
-            /> }
+            {!this.state.loadingRepos && (
+              <Paginator
+                direction="right"
+                clickHandler={this.clickHandler}
+                disabled={this.state.hasNext}
+              />
+            )}
           </div>
         </section>
       </React.Fragment>

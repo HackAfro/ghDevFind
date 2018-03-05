@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './DetailsContent.css';
 import RepoListItem from './RepoListItem/RepoListItem';
+import './DetailsContent.css';
 
 const BodyInfo = ({ value, label }) => (
   <div className="info">
@@ -25,14 +25,14 @@ const DetailsContent = ({ body }) => (
 );
 
 BodyInfo.propTypes = {
-  value: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
 };
 
 DetailsContent.propTypes = {
   body: PropTypes.shape({
-    followers: PropTypes.string,
-    following: PropTypes.string,
+    followers: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    following: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
     repos: PropTypes.object,
   }),
 };

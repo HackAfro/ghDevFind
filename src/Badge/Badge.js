@@ -24,20 +24,20 @@ const Badge = ({
 
 Badge.propTypes = {
   color: PropTypes.string,
-  fontSize: PropTypes.string,
+  fontSize: PropTypes.number,
   icon: PropTypes.node,
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
   uppercase: PropTypes.bool,
-  fontWeight: PropTypes.string,
+  fontWeight: PropTypes.number,
 };
 
 Badge.defaultProps = {
   color: 'black',
-  fontSize: '22',
+  fontSize: 22,
   icon: '',
   text: '',
   uppercase: true,
-  fontWeight: 'bold',
+  fontWeight: 600,
 };
 
 export default Badge;
