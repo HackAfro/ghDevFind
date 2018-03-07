@@ -1,14 +1,15 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Main from '../Home/Main';
+import store, { history } from '../store';
+
 import './App.css';
 
 const App = () => (
   <Router>
-    <div>
-      <Route path="/" component={Main} />
-    </div>
+    <Route path="/" component={Main} />
   </Router>
 );
 

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import SearchField from '../SearchBar/SearchField';
 
+import SearchField from '../SearchBar/SearchField';
 import SideBar from '../Sidebar/SideBar';
 import RepoList from '../RepoList/UserList';
 import Paginator from '../Paginator/Paginator';

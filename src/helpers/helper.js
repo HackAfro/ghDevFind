@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
-import { Subject } from 'rxjs/Subject';
 import moment from 'moment';
+import { Subject } from 'rxjs/Subject';
 
 import RepoListItem from '../RepoList/UserListItem/UserListItem';
 
@@ -98,7 +98,7 @@ export async function getCountries() {
       }));
 }
 
-export const observable = new Subject();
+// export const observable = new Subject();
 
 export const filterData = {
   languages: [
@@ -121,6 +121,8 @@ export const filterData = {
   ],
 };
 
+export const observable = new Subject();
+
 function parseNum(num, decPoints) {
   const numArr = num.toString().split('');
   const decimalPointIndex = numArr.indexOf('.');
@@ -132,6 +134,7 @@ function parseNum(num, decPoints) {
   }
   return parsedNum.join('');
 }
+
 
 export function userAge(date) {
   const now = moment();
