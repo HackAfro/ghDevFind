@@ -1,7 +1,7 @@
 {
   "name": "ghdevfind",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://hackafro.github.io/ghdevfind",
   "dependencies": {
     "apollo-client-preset": "^1.0.8",
