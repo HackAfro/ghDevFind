@@ -1,7 +1,6 @@
-import { observable } from '../helpers/helper';
 
 function reducer(e, action) {
-  observable.next('RESET_FILTER');
+  this.resetFilter();
   switch (action) {
     case 'SET_FOLLOWER_COUNT':
       this.setState(p => (
