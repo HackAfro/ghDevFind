@@ -20,11 +20,7 @@ const UserListItem = ({ item: { node } }) => {
   return (
     <div className="list-item">
       <Link to={`/user/${node.login}`}>
-        <img
-          src={node.avatarUrl}
-          alt={node.login}
-          className="list-header__image"
-        />
+        <img src={node.avatarUrl} alt={node.login} className="list-header__image" />
       </Link>
       <UserListItemBody body={body} />
     </div>

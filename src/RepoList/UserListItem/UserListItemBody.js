@@ -16,8 +16,10 @@ const UserListItemBody = ({
     <div className="list-header">
       <div className="action-container">
         <div>
-          <Link to={`/user/${login}`} className="list-header__text underline">{ name }</Link>
-          <h5 className="list-header__subtext">{ login }</h5>
+          <Link to={`/user/${login}`} className="list-header__text underline">
+            {name}
+          </Link>
+          <h5 className="list-header__subtext">{login}</h5>
         </div>
         <div>
           <Badge
@@ -30,7 +32,7 @@ const UserListItemBody = ({
           />
         </div>
 
-        { /* <button className="follow-button">Follow</button> */ }
+        {/* <button className="follow-button">Follow</button> */}
       </div>
       <UserFollowing
         userDetails={{
@@ -40,7 +42,7 @@ const UserListItemBody = ({
       />
     </div>
     <div className="list-text">
-      <p className="list-body__text">{ bio }</p>
+      <p className="list-body__text">{bio}</p>
     </div>
   </div>
 );

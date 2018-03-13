@@ -4,26 +4,23 @@ import PropTypes from 'prop-types';
 
 import UserListItem from './UserListItem/UserListItem';
 import GhSpinner from '../Spinner/Spinner';
-import { searchQuery, getHireableUsers, observable } from '../helpers/helper';
+import { searchQuery, getHireableUsers } from '../helpers/helper';
 
 import './UserList.css';
 
 class UserList extends React.Component {
-  componentWillReceiveProps({ search: { pageInfo } }) {
-    this.setPagInfo(pageInfo);
+  constructor(props) {
+    super(props);
+    this.pagCallback = props.variables.pagCallback;
   }
 
-  setPagInfo(pageInfo) {
-    const event = {
-      action: 'SET_PAGINATION_DATA',
-      data: pageInfo,
-    };
-    observable.next(event);
+  componentWillReceiveProps({ search: { pageInfo } }) {
+    this.pagCallback(pageInfo);
   }
 
   render() {
     const {
-      loading, error, search, variables,
+      loading, error, search, variables: { filterTerm },
     } = this.props;
 
     if (loading) {
@@ -35,14 +32,11 @@ class UserList extends React.Component {
     }
     if (error) return <h1>Error</h1>;
 
-    const { filterTerm } = variables;
     const hireableUsers = filterTerm ? search : getHireableUsers(search);
 
     return (
       <React.Fragment>
-        { hireableUsers.edges.map(user => (
-          <UserListItem item={user} key={user.node.id} />
-        )) }
+        {hireableUsers.edges.map(user => <UserListItem item={user} key={user.node.id} />)}
       </React.Fragment>
     );
   }
@@ -66,33 +60,34 @@ export default graphql(searchQuery, {
     data: {
       loading, error, search, variables,
     },
-  }) => (
-    {
-      loading,
-      error,
-      search,
-      variables,
-    }
-  ),
+  }) => ({
+    loading,
+    error,
+    search,
+    variables,
+  }),
   options: ({
-    limit, query, filterTerm, before, after,
-  }) => (
-    filterTerm ? {
-      variables: {
-        query: `${filterTerm}`,
-        limit,
-        filterTerm,
-        before,
-        after,
-      },
-    } : {
-      variables: {
-        query,
-        limit,
-        filterTerm,
-        before,
-        after,
-      },
-    }
-  ),
+    limit, query, filterTerm, pagCallback, before, after,
+  }) =>
+    (filterTerm
+      ? {
+        variables: {
+          query: `${filterTerm}`,
+          limit,
+          filterTerm,
+          pagCallback,
+          before,
+          after,
+        },
+      }
+      : {
+        variables: {
+          query,
+          limit,
+          filterTerm,
+          pagCallback,
+          before,
+          after,
+        },
+      }),
 })(UserList);
