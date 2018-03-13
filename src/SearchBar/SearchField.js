@@ -1,20 +1,19 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import { AppContext } from '../Provider/Provider';
 import './SearchField.css';
 
-const SearchField = ({ filterTerm, onChange }) => (
-  <input
-    placeholder="Enter your search term"
-    className="search-bar"
-    value={filterTerm}
-    onChange={onChange}
-  />
+const SearchField = () => (
+  <AppContext.Consumer>
+    {({ callbacks, state }) => (
+      <input
+        placeholder="Enter your search term"
+        className="search-bar"
+        value={state.anchor}
+        onChange={callbacks.handleSearch}
+      />
+    )}
+  </AppContext.Consumer>
 );
-
-SearchField.propTypes = {
-  filterTerm: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-};
 
 export default SearchField;
