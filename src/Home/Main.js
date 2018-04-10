@@ -7,18 +7,14 @@ import AppBody from '../App/AppBody';
 
 import UserDetails from '../UserDetails/UserDetails';
 
-const Main = ({ match }) => (
+const Main = () => (
   <div className="App">
     <main className="main-content">
       <AppBar />
-      <Route path={match.url} exact component={AppBody} />
-      <Route path="/user/:id/" component={UserDetails} />
+      <Route path="/" exact component={AppBody} />
+      <Route path="/user/:id/" exact component={UserDetails} />
     </main>
   </div>
 );
-
-Main.propTypes = {
-  match: PropTypes.objectOf(PropTypes.any).isRequired,
-};
 
 export default Main;
