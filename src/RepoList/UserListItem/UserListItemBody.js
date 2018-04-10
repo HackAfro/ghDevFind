@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
 import { Briefcase } from 'react-feather';
 
+import { TEXT_COLOR } from '../../helpers/helper';
 import Badge from '../../Badge/Badge';
 import UserFollowing from './UserFollowing';
 
@@ -23,11 +23,12 @@ const UserListItemBody = ({
         </div>
         <div>
           <Badge
-            color="lightseagreen"
+            color="white"
+            textColor={TEXT_COLOR}
             text={isHireable ? 'Hireable' : 'Unavailable'}
             icon={<Briefcase className="icon" size={12} />}
             fontSize="11"
-            uppercase
+            uppercase={false}
             fontWeight={500}
           />
         </div>
