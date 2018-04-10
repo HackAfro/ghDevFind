@@ -9,7 +9,7 @@ app.get('/auth-info', (req, res) => {
   res.json({ auth: 'fire' });
 });
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   console.log('fires');
   res.sendFile(path.join(`${__dirname}/build/index.html`));
 });
