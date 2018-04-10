@@ -2,10 +2,10 @@
   "name": "ghdevfind",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hackafro.github.io/ghdevfind",
   "dependencies": {
     "apollo-client-preset": "^1.0.8",
     "apollo-link-context": "^1.0.3",
+    "body-parser": "^1.18.2",
     "create-react-app": "^1.5.1",
     "dotenv": "^5.0.0",
     "express": "^4.16.3",
@@ -29,7 +29,8 @@
     "rxjs": "^5.5.6"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run build && node ./app",
+    "start:dev": "react-scripts start",
     "build": "react-scripts build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d build",

@@ -2,6 +2,13 @@
   "extends": "airbnb",
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "react/no-unused-state": "off"
+    "react/no-unused-state": "off",
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ]
   }
 }
