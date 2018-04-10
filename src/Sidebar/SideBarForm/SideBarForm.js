@@ -18,7 +18,7 @@ class SideBarForm extends React.Component {
     };
   }
 
-  async componentWillMount() {
+  async componentDidMount() {
     const countries = await getCountries();
     this.setState({ countries });
   }
