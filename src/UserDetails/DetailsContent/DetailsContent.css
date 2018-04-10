@@ -11,6 +11,7 @@
   padding: 20px;
   justify-content: space-between;
   margin: 0 10px 0 15px;
+  border-top: 6px solid var(--text-color);
 }
 .details-body__leading  > .info {
   display: flex;

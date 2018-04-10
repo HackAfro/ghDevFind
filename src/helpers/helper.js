@@ -140,4 +140,4 @@ export function userAge(date) {
   return parseNum(dateDiff, 1);
 }
 
-export const COLOR_CODE = '#30CD9A';
+export const TEXT_COLOR = '#30CD9A';
