@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { COLOR_CODE } from '../helpers/helper';
+import { TEXT_COLOR } from '../helpers/helper';
 
 import './Spinner.css';
 
@@ -32,7 +32,7 @@ GhSpinner.propTypes = {
 };
 
 GhSpinner.defaultProps = {
-  color: COLOR_CODE,
+  color: TEXT_COLOR,
   size: '60px',
 };
 
