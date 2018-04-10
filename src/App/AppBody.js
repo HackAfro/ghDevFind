@@ -32,7 +32,7 @@ const AppBody = () => (
           </div>
         </section>
       </React.Fragment>
-    )}
+      )}
   </AppContext.Consumer>
 );
 

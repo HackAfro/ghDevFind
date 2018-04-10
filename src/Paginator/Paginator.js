@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { ChevronLeft, ChevronRight } from 'react-feather';
 
 import { AppContext } from '../Provider/Provider';
-import { COLOR_CODE } from '../helpers/helper';
+import { TEXT_COLOR } from '../helpers/helper';
 
 import './Paginator.css';
 
@@ -20,7 +20,7 @@ const Paginator = ({ direction }) => (
             >
               <ChevronLeft
                 className="prev"
-                color={state.hasPrev ? `${COLOR_CODE}` : 'grey'}
+                color={state.hasPrev ? `${TEXT_COLOR}` : 'grey'}
                 size={40}
               />
             </button>
@@ -32,7 +32,7 @@ const Paginator = ({ direction }) => (
             >
               <ChevronRight
                 className="next"
-                color={state.hasNext ? `${COLOR_CODE}` : 'grey'}
+                color={state.hasNext ? `${TEXT_COLOR}` : 'grey'}
                 size={40}
               />
             </button>
