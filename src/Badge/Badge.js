@@ -2,14 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './Badge.css';
+import { TEXT_COLOR } from '../helpers/helper';
 
 const Badge = ({
-  color, fontSize, icon, text, fontWeight, uppercase, ...others
+  color, textColor, fontSize, icon, text, fontWeight, uppercase, ...others
 }) => (
   <span
     className={`badge hint--bottom-right hint--bounce hint--rounded ${color}`}
     style={{
       fontSize: `${fontSize}px`,
+      color: textColor,
       backgroundColor: `${color}`,
       fontWeight,
       textTransform: `${uppercase ? 'uppercase' : 'capitalize'}`,
@@ -24,6 +26,7 @@ const Badge = ({
 
 Badge.propTypes = {
   color: PropTypes.string,
+  textColor: PropTypes.string,
   fontSize: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
   icon: PropTypes.node,
   text: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.node]),
@@ -33,6 +36,7 @@ Badge.propTypes = {
 
 Badge.defaultProps = {
   color: 'black',
+  textColor: TEXT_COLOR,
   fontSize: 22,
   icon: '',
   text: '',
